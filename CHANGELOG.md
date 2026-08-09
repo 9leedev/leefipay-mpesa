@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-08-09
+
 ### Added
 
 - GitHub Actions CI matrix for Laravel 9–13 (package PHPUnit + fresh Laravel app integration)
