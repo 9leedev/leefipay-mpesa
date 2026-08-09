@@ -7,6 +7,7 @@ use LeefiPay\Mpesa\Http\Controllers\WebhookController;
 
 $path = trim((string) config('leefipay.webhook.path', 'leefipay/webhooks/mpesa'), '/');
 
+// Intentionally no `api` / `web` middleware group: Laravel 11+ skeletons omit
+// the `api` group by default, and `web` would enforce CSRF on inbound webhooks.
 Route::post($path, WebhookController::class)
-    ->middleware('api')
     ->name('leefipay.webhooks.mpesa');

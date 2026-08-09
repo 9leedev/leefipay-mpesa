@@ -1,5 +1,7 @@
 # LeefiPay M-Pesa for Laravel
 
+[![tests](https://github.com/9leedev/leefipay-mpesa/actions/workflows/tests.yml/badge.svg)](https://github.com/9leedev/leefipay-mpesa/actions/workflows/tests.yml)
+
 Official Laravel package for integrating applications with the **LeefiPay M-Pesa Open API**.
 
 API base: [https://leefipay.com/api/v1/](https://leefipay.com/api/v1/) · Docs: [https://leefipay.com/developers](https://leefipay.com/developers)
@@ -8,10 +10,15 @@ This package talks to LeefiPay’s public REST API (`/api/v1`) using Sanctum Bea
 
 ## Requirements
 
-| Requirement | Supported |
-|-------------|-----------|
-| PHP | **8.1+** |
-| Laravel | **9 · 10 · 11 · 12 · 13** |
+| Laravel | PHP | Status |
+|---------|-----|--------|
+| 9.x | 8.1+ | Supported |
+| 10.x | 8.1+ | Supported |
+| 11.x | 8.2+ | Supported |
+| 12.x | 8.2+ | Supported |
+| 13.x | 8.3+ | Supported |
+
+Compatibility is enforced by GitHub Actions: package PHPUnit tests (HTTP-faked) plus install into a fresh Laravel application for each matrix entry. Mark rows as **Tested** only after the Actions workflow is green on `main`.
 
 ## Installation
 
@@ -195,12 +202,15 @@ See [SECURITY.md](SECURITY.md).
 
 ```bash
 composer install
+composer validate --strict
 composer test
 ```
 
+CI also installs the package into a temporary Laravel app for each supported major version (package discovery, config publish, container + facade resolution). No real LeefiPay / M-Pesa API calls are made.
+
 ## Versioning
 
-Semantic Versioning. Current development line: **0.1.x**.
+Semantic Versioning. Current development line: **0.1.x**. Do not treat this as v1.0.0 until the full Laravel matrix is green in CI.
 
 ## License
 

@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- GitHub Actions CI matrix for Laravel 9–13 (package PHPUnit + fresh Laravel app integration)
+- README compatibility table and workflow status badge
+
+### Fixed
+
+- Webhook route no longer depends on the Laravel `api` middleware group (missing from Laravel 11+ skeletons)
+
+## [0.1.1] - 2026-08-09
+
+### Added
+
+- Laravel 13 compatibility (`illuminate/* ^13.0`, Testbench 11, PHPUnit 12)
+
 ## [0.1.0] - 2026-08-09
 
 ### Added
