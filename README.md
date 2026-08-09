@@ -11,7 +11,7 @@ This package talks to LeefiPay’s public REST API (`/api/v1`) using Sanctum Bea
 | Requirement | Supported |
 |-------------|-----------|
 | PHP | **8.1+** |
-| Laravel | **9 · 10 · 11 · 12** |
+| Laravel | **9 · 10 · 11 · 12 · 13** |
 
 ## Installation
 
