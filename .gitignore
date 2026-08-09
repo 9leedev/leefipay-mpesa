@@ -1,0 +1,17 @@
+/.phpunit.cache
+/.phpunit.result.cache
+/vendor/
+/composer.lock
+.php-cs-fixer.cache
+.phpstan.neon
+.idea/
+.vscode/
+*.swp
+.DS_Store
+.env
+.env.*
+!.env.example
+coverage/
+build/
+
+.cursor/
